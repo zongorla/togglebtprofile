@@ -1,13 +1,13 @@
 #!/bin/bash
-
-hssink="bluez_sink.38_18_4C_03_D2_7C.headset_head_unit"
-hscard="bluez_card.38_18_4C_03_D2_7C"
+btmac="38_18_4C_03_D2_7C"
+hssink="bluez_sink.$btmac.headset_head_unit"
+hscard="bluez_card.$btmac"
 hsprotocol="headset_head_unit"
 hsnotifyicon="audio-headset"
 
 a2dpprotocol="a2dp_sink"
-a2dpsink="bluez_sink.38_18_4C_03_D2_7C.a2dp_sink"
-a2dpcard="bluez_card.38_18_4C_03_D2_7C"
+a2dpsink="bluez_sink.$btmac.a2dp_sink"
+a2dpcard="bluez_card.$btmac"
 a2dpnotifyicon="audio-headphones"
 
 if pacmd list-sinks | grep "$hsprotocol"; then
